@@ -1,0 +1,48 @@
+% 基础设施和编码
+\usepackage{geometry} % 页面布局设置
+\geometry{a4paper,left=1.7cm,right=1.7cm,top=1.5cm,bottom=2.5cm} 
+
+\usepackage{fontspec, xltxtra, xunicode} % 字体设置
+\usepackage[scaled]{beramono} % Bera Mono字体，适用于打印和屏幕阅读
+\usepackage[T1]{fontenc} % 字体编码
+% \usepackage[UTF8]{ctex} % 支持中文，如果需要的话
+% 设置字体
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Times New Roman}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Times New Roman}
+%行间距
+\renewcommand{\baselinestretch}{1}
+% 行间距
+\setlength{\arraycolsep}{6pt} 
+\renewcommand{\arraystretch}{1.3} 
+%段间距
+
+
+
+% 表格和数字表示
+\usepackage{booktabs} % 高级表格线条
+\usepackage{siunitx} % 单位和数字格式
+\counterwithout{table}{chapter}
+\renewcommand{\tablename}{}
+\renewcommand{\thetable}{{\normalsize{T}\footnotesize\text{ABLE} \normalsize\Roman{table}}}
+
+
+% 多列布局
+\usepackage{multicol} % 多栏布局
+\usepackage{float} % 浮动体控制
+\setlength\columnsep{0.4cm} %双栏间距长度 
+
+
+% 列表和项目符号
+\usepackage{enumerate} % 自定义编号列表
+\usepackage{enumitem} % 列表样式设置
+
+% 超链接和引用
+\usepackage{hyperref} % 超链接支持
+
+% 图表标题和注释
+\usepackage{caption} % 图表标题定制
+\usepackage{capt-of} % 图表和其他浮动体的标题
+
+% 辅助工具
+\usepackage{lastpage} % 获取总页数

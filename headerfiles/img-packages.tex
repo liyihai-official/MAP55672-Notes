@@ -1,0 +1,30 @@
+% 图形和图像处理
+\usepackage{graphicx} % 图像插入
+\usepackage{tikz} % TikZ绘图
+\usepackage{circuitikz} % 电路图绘制
+\usepackage{subfigure} % 图像子图
+\usepackage{wrapfig} % 图文绕排
+\usepackage{pdfpages} % 插入外部PDF
+\usepackage{pdflscape} % 横向页面
+
+%设置图片文件夹
+\graphicspath{{./files/img/}}
+
+
+\usetikzlibrary{intersections}
+\usetikzlibrary{shapes,arrows,positioning}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{calc}
+
+
+% 设置图片caption的样式
+\captionsetup[table]{width=.45\textwidth, labelsep=period}
+\counterwithout{figure}{chapter}
+\renewcommand{\figurename}{}
+\captionsetup[figure]{width=0.45\textwidth, labelsep=period}
+\renewcommand{\thefigure}{\normalsize{F}\footnotesize\text{ig \normalsize\arabic{figure}}}
+\renewcommand{\figureautorefname}{Fig.}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}

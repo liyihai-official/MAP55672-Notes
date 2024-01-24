@@ -1,0 +1,41 @@
+% 代码和附录
+\usepackage{listings} % 代码显示
+\usepackage{xcolor} % 颜色支持，供listings等使用
+\usepackage{xpatch} % 宏补丁
+\usepackage{blindtext} % 生成示例文本
+
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\lstdefinestyle{PythonStyle}{
+    language=Python,             
+    basicstyle=\ttfamily\footnotesize,  % 更新字体大小
+    keywordstyle=\color{blue},   
+    stringstyle=\color{orange},  
+    commentstyle=\color{darkgreen},  
+    morecomment=[s][\color{brown}]{"""}{"""},
+    breaklines=true,             
+    numbers=left,                
+    numberstyle=\tiny\color{gray}, % 保持行号的字体为 \tiny
+    showstringspaces=false,      
+    frame=tb,                    
+}
+
+\lstdefinestyle{CStyle}{
+    language=C,                  
+    basicstyle=\ttfamily\footnotesize,  % 更新字体大小
+    keywordstyle=\color{blue},   
+    stringstyle=\color{orange},  
+    commentstyle=\color{darkgreen},  
+    breaklines=true,             
+    numbers=left,                
+    numberstyle=\tiny\color{gray}, % 保持行号的字体为 \tiny
+    showstringspaces=false,      
+    frame=tb,                    
+}
+
+
+% 用来设置附录中代码的样式
+\makeatletter
+\xpatchcmd{\chapter}
+  {\if@openright\cleardoublepage\else\clearpage\fi}{\par\relax}
+  {}{}
+\makeatother

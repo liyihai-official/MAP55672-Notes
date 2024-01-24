@@ -1,0 +1,46 @@
+% 标题和目录格式
+\usepackage{titlesec} % 标题格式自定义
+\usepackage{fancyhdr} % 页眉页脚自定义
+
+% 修改 chapter section 等 title 的命令形式
+\renewcommand{\thechapter}{\Roman{chapter}}
+\titleformat{\chapter}[hang]
+  {\normalfont\large\centering}{\thechapter. }{0em}{\large}
+\titlespacing*{\chapter}{0pt}{1em}{1em}
+
+% % 重定义 section 的编号为大写字母
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\titleformat{\section}
+{\normalfont\normalsize\itshape}
+{\arabic{chapter}.\arabic{section} }
+{0em}
+{}
+\titlespacing*{\section}{0pt}{1.2em}{0.5em}
+
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}}
+\titleformat{\subsection}
+{\normalfont\normalsize\itshape}
+{\arabic{chapter}.\arabic{section}.\arabic{subsection} }
+{0em}
+{}
+\titlespacing*{\subsection}{0pt}{1em}{0.5em}
+
+% Paragraph
+\titleformat{\paragraph}[runin]
+{\normalsize\bfseries}{\theparagraph}{1em}{}
+
+
+% 页码设计
+% \pagestyle{fancy}
+% \fancyhead[C]{}
+% \fancyhead[L]{}
+% \fancyhead[R]{}
+
+%以下命令中L--左侧 R--右侧 C--中间 O--奇数页 E--偶数页
+% \fancyhead[LO,RE]{}%奇数页左侧，偶数页右侧显示页眉
+\fancyfoot[CO,RE]{}%奇数页中间，偶数页右侧页脚为空
+\fancyfoot[LO,CE]{}%奇数页左侧，偶数页中间页脚为空
+\fancyfoot[CO,CE]{\thepage}%奇数页右侧，偶数页左侧显示 当前页 of 总页数
+\renewcommand{\headrulewidth}{0pt}%改为0pt即可去掉页眉下面的横线
+\renewcommand{\footrulewidth}{0pt}%改为0pt即可去掉页脚上面的横线
+

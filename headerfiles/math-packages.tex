@@ -1,0 +1,28 @@
+% 数学相关
+\usepackage{amsthm, amsmath, amssymb} % 数学公式和符号
+
+% 命令定义
+\def\dis{\mathop{}\!\displaystyle}
+
+\def\dif{\mathop{}\!\mathrm{d}}
+\def\Var{\mathop{}\!\mathrm{Var \:}}
+
+\def\sh{\mathop{}\!\mathrm{sh \:}}
+\def\ch{\mathop{}\!\mathrm{ch \:}}
+\def\thx{\mathop{}\!\mathrm{th \:}}
+\def\arsh{\mathop{}\!\mathrm{arsh \:}}
+\def\arch{\mathop{}\!\mathrm{arch \:}}
+\def\arth{\mathop{}\!\mathrm{arth \:}}
+\def\arccot{\mathop{}\!\mathrm{arccot \:}}
+
+% 英文：自定义 定义、定理、引理 相关命令
+\newtheorem{mydef}{Def}[section]
+\newtheorem{myTheo}{Theorem}
+\newtheorem{myle}{Lemma}
+\newtheorem*{mypro}{Proof}
+% \newtheorem{example}{例}[section]
+\newtheorem{example}{Example}[section]
+
+
+% Equation
+\renewcommand{\theequation}{\footnotesize \arabic{chapter}.\arabic{equation}}

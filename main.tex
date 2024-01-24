@@ -1,0 +1,55 @@
+\documentclass[a4paper,10pt]{report}
+\input{headerfiles/main-packages.tex}
+\input{headerfiles/math-packages.tex}
+\input{headerfiles/img-packages.tex}
+\input{headerfiles/code-packages.tex}
+\input{headerfiles/custom-packages.tex}
+
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\blue}[1]{{\color{blue}{#1}}}
+\edef\oldtt{\ttdefault}
+\renewcommand{\ttdefault}{\oldtt}
+ 
+% \title{}
+% \author{}
+% \date{}
+
+\begin{document}
+
+\begin{center}
+  \begin{minipage}{0.8\textwidth}
+    \centering
+    \Huge MAP55672 NOTEs
+  \end{minipage}
+\end{center}
+\vspace*{.5em}
+\begin{multicols}{2}
+  \begin{center}
+    LI Yihai \\
+    {\itshape Trinity College Dublin}\\
+    Notes \\
+    {\itshape Mathematics Institute}
+  \end{center}
+\end{multicols}
+\vspace*{1em}
+
+
+\begin{multicols}{2}
+\input{chap/chap0.tex}
+% \input{chap/contents/data_preprocessing}
+% \input{chap/contents/ML_methods}
+% \input{chap/contents/evaluation}
+% \input{chap/content}
+% \input{chap/contents/PartII}
+\end{multicols}
+
+% \begin{multicols}{2}
+% {
+%   \small
+% \bibliographystyle{plain}
+% \bibliography{bibfile}
+% }
+% \end{multicols}
+% \input{chap/appendix.tex}
+
+\end{document}
